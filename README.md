@@ -1,10 +1,10 @@
-﻿<div align='center'>
+﻿
 
 # Hexagon Travels — v3
 
 <img src='https://github.com/dotrwt/HexagonTravels-v3/blob/main/assets/logo.png' alt='logo' height='200px'>
 
-<div>
+
 
 Marketing website for **Hexagon Travels**, a group and corporate (MICE) travel agency based in Ahmedabad, India, specializing in custom group tours, school excursions, honeymoons, and corporate retreats.
 
