@@ -1,0 +1,19 @@
+body {
+  background-color: #FAF9F5;
+}
+.text-balance {
+  text-wrap: balance;
+}
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - 50px)); }
+}
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: scroll 30s linear infinite;
+}
+.marquee-container {
+  overflow: hidden;
+  width: 100%;
+}

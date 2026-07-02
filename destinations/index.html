@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" style="">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Destinations - Hexagon Travels</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="../script.js"></script>
+  <script src="destinations.js?v=2"></script>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="index.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&amp;display=swap"
+    rel="stylesheet">
+</head>
+
+<body class="text-text font-body-lg min-h-screen antialiased selection:bg-black selection:text-white bg-page-bg">
+  <!-- 1. Floating Nav (TopAppBar) -->
+  <header class="fixed top-[24px] left-0 right-0 z-50 flex items-center justify-center px-4 w-full pointer-events-none">
+    <div
+      class="pointer-events-auto w-full max-w-[700px] flex items-center justify-between bg-[#000000] backdrop-blur-xl rounded-full px-xs py-xs shadow-xl border border-white/10 h-[56px]">
+      <div class="flex items-center gap-md pl-xs">
+        <a href="../index.html"
+          class="flex items-center shrink-0 hover:scale-105 transition-transform duration-300 pl-1">
+          <img src="../assets/main-logo.png" alt="Hexagon Travels Logo" class="h-[26px] w-auto object-contain">
+        </a>
+        <nav class="hidden md:flex items-center gap-6">
+          <a class="font-label text-label text-page-bg/80 hover:text-page-bg transition-colors duration-300"
+            href="../index.html">Home</a>
+          <a class="font-label text-label text-page-bg/80 hover:text-page-bg transition-colors duration-300"
+            href="#explore">Destinations</a>
+          <a class="font-label text-label text-page-bg/80 hover:text-page-bg transition-colors duration-300"
+            href="../index.html#services">Services</a>
+          <a class="font-label text-label text-page-bg/80 hover:text-page-bg transition-colors duration-300"
+            href="../index.html#about">About Us</a>
+        </nav>
+      </div>
+      <a href="#contact"
+        class="border border-page-bg/30 text-page-bg font-label rounded-full hover:bg-page-bg hover:text-black transition-all duration-300 shrink-0 flex items-center justify-center px-4 text-[10px] h-[32px] font-semibold uppercase tracking-wider">
+        Get in Touch
+      </a>
+    </div>
+  </header>
+  <main>
+    <!-- 1. Hero -->
+    <section
+      class="pt-24 pb-16 md:pt-[240px] md:pb-[120px] px-4 md:px-margin max-w-[1728px] mx-auto flex flex-col items-center text-center relative overflow-visible bg-page-bg">
+      <div class="mb-10 hover:scale-[1.02] transition-transform duration-300 cursor-default select-none">
+        <img src="../assets/logo.png" alt="Hexagon Travels" class="h-24 md:h-[110px] w-auto object-contain">
+      </div>
+      <h1
+        class="font-display text-3xl sm:text-5xl md:text-display text-balance max-w-4xl mb-lg text-text tracking-tighter">
+        Explore Our Destinations</h1>
+      <p class="font-body-lg text-body-lg text-muted max-w-2xl mb-lg">
+        Discover the world's most breathtaking locations with our curated travel experiences.
+      </p>
+      <div
+        class="w-full max-w-[1492px] bg-panel-bg overflow-hidden shadow-2xl relative z-10 rounded-[24px] md:rounded-[40px] h-[250px] sm:h-[500px]">
+        <img alt="Canyon road trip banner" class="w-full h-full object-cover" src="../assets/europe.jpg">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent"></div>
+      </div>
+    </section>
+
+    <!-- 2. Grid & Filter Section -->
+    <section id="explore" class="py-16 md:py-[100px] px-4 md:px-margin max-w-[1728px] mx-auto bg-page-bg">
+      <div class="flex flex-col items-center mb-16">
+        <h2 class="font-display text-h2 mb-8 font-bold tracking-tight text-center text-text">Curated Destinations</h2>
+        <div class="flex flex-wrap justify-center gap-3">
+          <button data-filter="all"
+            class="px-6 py-2 rounded-full bg-black text-page-bg font-label text-sm shadow-md">All</button>
+          <button data-filter="domestic"
+            class="px-6 py-2 rounded-full bg-white text-text font-label text-sm hover:bg-gray-50 transition-colors shadow-sm">Domestic</button>
+          <button data-filter="international"
+            class="px-6 py-2 rounded-full bg-white text-text font-label text-sm hover:bg-gray-50 transition-colors shadow-sm">International</button>
+        </div>
+      </div>
+      <div id="destinations-grid"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full transition-opacity duration-200">
+        <!-- Dynamic cards inserted by destinations.js -->
+      </div>
+    </section>
+
+    <!-- 3. Contact CTA Section -->
+    <section id="contact" class="py-16 md:py-section px-4 md:px-margin bg-page-bg border-t border-line/30">
+      <div class="max-w-screen-xl mx-auto flex flex-col items-center text-center">
+        <div class="relative z-10 flex flex-col items-center">
+          <div
+            class="inline-flex items-center justify-center bg-white border border-line px-10 py-6 rounded-[24px] shadow-md mb-12 shrink-0 hover:scale-[1.03] transition-all duration-300">
+            <img src="../assets/logo.png" alt="Hexagon Travels Logo" class="h-16 md:h-24 w-auto object-contain">
+          </div>
+          <h2
+            class="font-display text-3xl sm:text-5xl md:text-[68px] font-bold text-text tracking-tighter leading-[1.1] mb-8 max-w-4xl text-balance">
+            Looking for a different destination or a custom itinerary?
+          </h2>
+          <p class="font-body-lg text-muted max-w-2xl mb-12">
+            We’ll tailor a trip to your exact needs. Reach out to our design experts.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-6">
+            <!-- WhatsApp Contact Button -->
+            <a href="https://wa.me/919998888071" target="_blank"
+              class="bg-[#25D366] hover:bg-[#22c35e] text-white font-label rounded-full transition-all duration-300 shrink-0 flex items-center justify-center gap-2 px-8 text-xs h-[48px] font-bold uppercase tracking-wider shadow-sm">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path
+                  d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.965C16.588 1.977 14.12 .953 11.5 1.952c-5.438 0-9.863 4.37-9.866 9.8.002 2.083.547 4.113 1.588 5.892l-1.042 3.805 3.928-1.028zM17.07 14.61c-.276-.138-1.636-.807-1.89-.899-.253-.093-.438-.138-.622.138-.184.277-.714.899-.875 1.084-.162.184-.323.207-.6.069-.276-.138-1.168-.43-2.223-1.373-.822-.733-1.376-1.639-1.537-1.916-.162-.276-.017-.426.12-.563.125-.123.276-.323.415-.484.14-.161.185-.276.277-.461.092-.185.046-.346-.023-.485-.069-.138-.622-1.5-.853-2.053-.225-.54-.47-.465-.644-.473-.166-.008-.356-.01-.546-.01-.19 0-.501.07-.763.356-.263.285-1.004.981-1.004 2.392 0 1.411 1.027 2.772 1.171 2.956.144.185 2.022 3.088 4.899 4.328.685.295 1.219.472 1.636.604.69.219 1.317.188 1.812.115.55-.08 1.636-.669 1.867-1.315.23-.647.23-1.2.161-1.314-.069-.115-.253-.185-.53-.323z" />
+              </svg>
+              WhatsApp Us
+            </a>
+            <!-- Direct Call Button -->
+            <a href="tel:+919998888071"
+              class="bg-black hover:bg-black/80 text-white font-label rounded-full transition-all duration-300 shrink-0 flex items-center justify-center gap-2 px-8 text-xs h-[48px] font-bold uppercase tracking-wider shadow-sm">
+              <span class="material-symbols-outlined text-lg">call</span>
+              Call Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-black text-white pt-16 pb-12 px-4 md:px-margin rounded-t-[32px] md:rounded-t-[64px] relative z-20">
+    <div class="max-w-[1728px] mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-start gap-8 mb-12 md:mb-xl">
+        <!-- Brand Column -->
+        <div class="flex items-start">
+          <img src="../assets/main-logo.png" alt="Hexagon Travels Logo"
+            class="h-20 md:h-[120px] w-auto object-contain hover:opacity-85 transition-opacity duration-300">
+        </div>
+        <!-- Contact Column -->
+        <div>
+          <h4 class="font-label text-white mb-6 uppercase tracking-widest text-[10px]">Contact Us</h4>
+          <ul class="flex flex-col gap-4 text-white/60 font-body-md">
+            <li class="">Phone: +91 9998888071</li>
+            <li class="">Email: travelshexagon@gmail.com</li>
+            <li class="">Address: 401 Phoenix by D&amp;C, Ahmedabad, Gujarat 380009</li>
+          </ul>
+        </div>
+      </div>
+      <div class="pt-md border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="font-label text-[11px] text-white/40">© 2026 Hexagon Travels. All rights reserved.</p>
+        <p class="font-label text-[11px] text-white/40">developed by <a href="https://dotrwt.in" target="_blank"
+            class="text-white/60 hover:text-white transition-colors font-medium">dotrwt</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
