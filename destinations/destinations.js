@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       gridContainer.innerHTML = filtered.map(d => `
         <div class="relative h-[420px] rounded-[32px] p-8 flex flex-col justify-end group overflow-hidden shadow-sm border border-line/20">
-          <img alt="${d.title}" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="${d.img}">
+          <img alt="Beautiful tour destination in ${d.title} by Hexagon Travels" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="${d.img}" loading="lazy">
           <div class="absolute inset-0 bg-black/45"></div>
           <div class="relative z-10 flex flex-col h-full justify-between items-start pointer-events-none">
             <span class="bg-white/20 backdrop-blur-md text-white font-label text-[10px] uppercase tracking-wider px-3 py-1 rounded-full border border-white/20">
@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
               <h3 class="font-h3 text-2xl font-bold mb-2 text-white">${d.title}</h3>
               <p class="font-body-md text-white/80 text-xs mb-4 leading-relaxed">${d.desc}</p>
               <a href="https://wa.me/919998888071?text=Hi%2C%20I%20am%20interested%20in%20a%20trip%20to%20${encodeURIComponent(d.title)}" 
-                 target="_blank" 
+                 target="_blank" rel="noopener noreferrer"
                  class="flex items-center justify-between w-full bg-white/10 backdrop-blur-md border border-white/25 hover:bg-white hover:text-black text-white px-5 py-3 rounded-2xl transition-all duration-300 shadow-sm mt-2">
                 <div class="flex items-center gap-2">
                   <span class="material-symbols-outlined text-sm">schedule</span>
