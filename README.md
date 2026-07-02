@@ -2,7 +2,7 @@
 
 # Hexagon Travels — v3
 
-<img src='https://github.com/dotrwt/HexagonTravels-v3/blob/main/assets/logo.png' alt='logo' height='200px'>
+<img src='https://github.com/dotrwt/HexagonTravels-v3/blob/main/assets/logo.png' alt='logo' height='200px' align='center'>
 
 
 
